@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Chat System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>ORICARE ROMANIA</h1>
+        </div>
+        <div class="chat-tabs">
+            <button class="tab active" data-department="marketing">Marketing</button>
+            <button class="tab" data-department="call-center">Call Center</button>
+            <button class="tab" data-department="depozit">Depozit</button>
+        </div>
+
+        <!-- Marketing chat messages container -->
+        <div class="chat-messages" data-department="marketing">
+            {% for message_id, message in chat_history.items() if message["department"] == "marketing" %}
+                <div class="message">
+                    <p><strong>{{ message["display_name"] }} - {{ message["department"] }}:</strong> {{ message["message"] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Call Center chat messages container -->
+        <div class="chat-messages" data-department="call-center" style="display: none;">
+            {% for message_id, message in chat_history.items() if message["department"] == "call-center" %}
+                <div class="message">
+                    <p><strong>{{ message["display_name"] }} - {{ message["department"] }}:</strong> {{ message["message"] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Depozit chat messages container -->
+        <div class="chat-messages" data-department="depozit" style="display: none;">
+            {% for message_id, message in chat_history.items() if message["department"] == "depozit" %}
+                <div class="message">
+                    <p><strong>{{ message["display_name"] }} - {{ message["department"] }}:</strong> {{ message["message"] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="chat-input">
+            <textarea id="messageInput" placeholder="Type your message..."></textarea>
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+    const userDisplayName = "{{ session['display_name'] }}";
+    const userDepartment = "{{ session['department'] }}";
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+[
+    {
+        "display_name": "Test User 1",
+        "department": "Call Center",
+        "username": "user1",
+        "password": "user1"
+    },
+    {
+        "display_name": "Test User 2",
+        "department": "Marketing",
+        "username": "user2",
+        "password": "user2"
+    }
+]
