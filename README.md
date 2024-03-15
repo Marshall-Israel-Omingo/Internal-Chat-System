@@ -8,6 +8,8 @@ This proof of concept demonstrates an internal LAN chat system designed for effi
 - **Real-Time Messaging:** Utilizes Flask-SocketIO for instant message broadcasting across the network.
 - **Chat History:** Messages are stored and retrieved from a JSON file, ensuring that chat history is maintained.
 
+## ☕ [Support my work on Ko-Fi](https://ko-fi.com/thatsinewave)
+
 ## Installation
 1. Ensure Python 3.x is installed.
 2. Install required packages:
