@@ -2,7 +2,6 @@
 
 # Internal LAN Chat System
 
-## Overview
 This proof of concept demonstrates an internal LAN chat system designed for efficient communication within a local network. Utilizing Flask and SocketIO, the system offers real-time messaging capabilities and a simple authentication mechanism.
 
 </div>
