@@ -1,14 +1,22 @@
+<div align="center">
+
 # Internal LAN Chat System
 
 ## Overview
 This proof of concept demonstrates an internal LAN chat system designed for efficient communication within a local network. Utilizing Flask and SocketIO, the system offers real-time messaging capabilities and a simple authentication mechanism.
+
+</div>
 
 ## Features
 - **User Authentication:** Login system based on a JSON file storing user credentials.
 - **Real-Time Messaging:** Utilizes Flask-SocketIO for instant message broadcasting across the network.
 - **Chat History:** Messages are stored and retrieved from a JSON file, ensuring that chat history is maintained.
 
+<div align="center">
+
 ## ☕ [Support my work on Ko-Fi](https://ko-fi.com/thatsinewave)
+
+</div>
 
 ## Installation
 1. Ensure Python 3.x is installed.
